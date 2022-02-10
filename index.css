@@ -1,0 +1,535 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-dark: 244 23% 12%;
+    --clr-white: 20 33% 98%;
+    --clr-blue: 177 68% 64%;
+    --clr-orange: 12 94% 65%;
+    --clr-orange-light: 33 100% 70%;
+    --clr-light: 180 2% 39%;;
+
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.775rem;
+    --fs-100: 0.6rem;
+    
+    /* font-families */
+    --ff-serif: "IBM Plex Sans", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-200);
+    color: hsl( var(--clr-dark) );
+    background-image: url(starter-code/assets/bg-main-desktop.png);
+    
+    line-height: 1.5;
+    min-height: 100vh;
+    
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    margin: 2rem 15rem;
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) ); 
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
+/* colors */
+
+   
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-blue { background-color: hsl( var(--clr-blue) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-orange { background-color: hsl( var(--clr-orange) );}
+.bg-orange-light { background-color: hsl( var(--clr-orange-light) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+.fs-100 { font-size: var(--fs-100); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl( var(--clr-white) / .25);
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.large-button {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+ 
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* primary-header */
+
+.primary-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+
+/* color design-system */
+
+.color-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* typography */
+
+.typo-grid{
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+/* button system */
+
+.button-grid{
+    grid-template-columns: 1fr 1fr;
+    height: 25rem;
+    border-radius: 15px;
+    justify-items: center;
+    align-items: center;
+    padding: 3rem;
+    margin: 3rem 0;
+}
+
+.orange-format{
+    width: 20rem;
+    height: 30rem;
+}
+
+.social-btn-block{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.btns-container{
+    margin-top: 1.5rem;
+}
+
+.social-btn{
+    cursor: pointer;
+    border-radius: 15px;
+    width: 15rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+/* intro */
+
+.pattern1{
+    position: absolute;
+    background-image: url(./starter-code/assets/bg-pattern-1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 25rem;
+    top: -2rem;
+    right: -3rem;
+    /* margin: -2rem -6rem; */
+}
+
+.text-block{
+    
+    margin: 5rem 5rem 5rem 0;
+    width: 45rem;
+}
+
+.text-block h1{
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+/* main landing page  */
+
+.pres-block{
+    display: flex;
+    /* position: relative; */
+    margin: 10rem 0 15rem 0;
+    height: 30rem;
+    background-color: hsl( var(--clr-dark) );
+    border-radius: 15px;
+}
+
+.pres-block-back{
+    position:absolute;
+    background-image: url(./starter-code/assets/bg-pattern-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 25rem;
+    /* background-position: center; */
+    left: 40rem;
+}
+
+.pres-block-phone{
+    position: absolute;
+    background-image: url(./starter-code/assets/illustration-app.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 7rem;
+    top:-10rem;
+    
+    width: 25rem;
+    position: relative;
+    
+}
+
+.pres-block-pricing{
+    position: absolute;
+    right: 23rem;
+    top: 45rem;
+}
+
+/* footer */
+
+footer{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.grid-p{
+    grid-column: 2/ span 2;
+}
+
+.social-logo{
+    justify-self: end;
+    display: flex;
+    flex-direction: row;
+    
+}
+.fa-brands{
+    margin-left: 1rem;
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+@media (max-width:800px) {
+
+
+    body{
+        margin: 2rem;
+        background-image: url(./starter-code/assets/bg-main-tablet.png);
+    }
+
+    .pattern1{
+    width: 15rem;
+    right: -3rem;
+    }
+
+    .text-block{
+        width: 37rem;
+    }
+
+    .pres-block-back{
+        
+        width: 25rem;
+        height: 25rem;
+        /* background-position: center; */
+        left: 20rem;
+    }
+
+    .pres-block-pricing{
+        position: absolute;
+        right: 8rem;
+        top: 50rem;
+    }
+
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .grid-h1{
+        grid-column: 1/ span 2;
+    }
+
+    .grid-p{
+        grid-row: 2/ span 1;
+        grid-column: 1/ span 2;
+    }
+
+    .social-logo{
+        grid-row: 2/ span 1;
+        grid-column: 3/ span 1;
+        align-self: center;
+    }
+}
+
+
+@media (max-width:600px) {
+
+    /* body{
+        margin: 0;
+        padding: 0;
+    } */
+
+        .pattern1{
+        display: none;
+        }
+
+        .text-block{
+            margin: 2rem;
+            width: 17rem;
+        }
+
+        .text-block h1{
+            font-size: 3rem;
+        }
+
+        .pres-block{
+            
+            margin: 0;
+            width: 100%;
+            
+            
+            
+            
+        }
+
+        .pres-block-back{
+            background: none;
+            width: 15rem;
+            height: 25rem;
+            /* background-position: center; */
+            left: -5rem;
+        }
+    
+        
+
+}
+
+

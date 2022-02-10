@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        
+    <div class="container flow">
+
+        <section class="primary-header flow">
+            <h1 class="fs-500 ff-serif bold">Equalizer</h1>
+            <h2 class="fs-400 ff-serif bold">Design system</h1>
+        </section>
+        
+        <section class="flow" id="colors" style="margin: 4rem 0">
+            <h2 class="bold fs-500">Colors</h2>
+            <div class="grid color-grid">
+                <div class="flow width" style="flex-grow: 1;">
+                    <div class="bg-blue text-dark ff-serif fs-400 bold" style="padding: 1rem 1rem 3rem 2rem; border: 1px solid white;border-radius: 15px">#66E2DC</div>
+                    <p ><span class="text-accent" style="margin-right: 2rem;">RGB</span> 102, 226, 220</p>
+                    <p><span class="text-accent" style="margin-right: 2rem;">HSL</span> 177°, 68%, 64%</p>
+                </div>
+                <div class="flow width" style="flex-grow: 1;">
+                    <div class="bg-orange text-dark ff-serif fs-400 bold" style="padding: 1rem 1rem 3rem 2rem; border: 1px solid white;border-radius: 15px">#FA7453</div>
+                    <p><span class="text-accent" style="margin-right: 2rem;">RGB</span> 250, 116 83</p>
+                    <p><span class="text-accent" style="margin-right: 2rem;">HSL</span> 12°, 94%, 65%</p>
+                </div>
+                <div class="flow width" style="flex-grow: 1;">
+                    <div class="bg-orange-light text-dark ff-serif fs-400 bold" style="padding: 1rem 1rem 3rem 2rem; border: 1px solid white;border-radius: 15px">#FFB964</div>
+                    <p><span class="text-accent" style="margin-right: 2rem;">RGB</span> 255, 185, 100</p>
+                    <p><span class="text-accent" style="margin-right: 2rem;">HSL</span> 33°, 100%, 70%</p>
+                </div>
+                <div class="flow width" style="flex-grow: 1;">
+                    <div class="bg-white text-dark ff-serif fs-400 bold" style="padding: 1rem 1rem 3rem 2rem; border: 1px solid black;border-radius: 15px;">#FCFAF9</div>
+                    <p><span class="text-accent" style="margin-right: 2rem;">RGB</span> 255, 250, 249</p>
+                    <p><span class="text-accent" style="margin-right: 2rem;">HSL</span> 20°, 33%, 98%</p>
+                </div>
+                <div class="flow width" style="flex-grow: 1;">
+                    <div class="bg-dark text-white ff-serif fs-400 bold" style="padding: 1rem 1rem 3rem 2rem; border: 1px solid white;border-radius: 15px">#191826</div>
+                    <p><span class="text-accent" style="margin-right: 2rem;">RGB</span> 25, 24, 38</p>
+                    <p><span class="text-accent" style="margin-right: 2rem;">HSL</span> 244°, 23%, 12%</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="flow" id="typography"  style="margin: 4rem 0">
+            <h2 class="bold fs-500">Typography</h2>
+            <div class="grid typo-grid">
+                <div class="flow " style=" --flow-space: 4rem;">
+                    <div> 
+                        <p >H1<span class="text-accent" style="margin-left: 2rem;"> IBM PLex Sans Bold 88px 88px line -1px spacing</span></p>
+                        <h1 class="fs-700 ff-serif bold">Lorem Ipsum Dolor Sit</h1> 
+                    </div>
+                    <div> 
+                        <p >H2 <span class="text-accent" style="margin-left: 2rem;"> IBM Plex Sans Bold 40px 52px Line</span> </p>
+                        <h2 class="fs-500 ff-serif uppercase bold">Donec nec justo eget felis facilisis fermentum</h2>
+                    </div>
+                </div>
+                
+                <div class="flow " style=" --flow-space: 4rem;">
+                    <div> 
+                        <p >Body 1<span class="text-accent"  style="margin-left: 2rem;">IBM Plex Sans Reg 20px 34px Line</span></p>
+                        <p class="fs-300 ff-serif">Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+                    </div>
+                    <div> 
+                        <p>Body 2 <span class="text-accent" style="margin-left: 2rem;">Plex Sans Reg 16px 26px Line</span> </p>
+                        <p class="fs-200 ff-serif">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="flow" id="interactive-elements">
+            <h2 class="fs-500 bold">Buttons</h2>
+                       
+            <div class="grid button-grid bg-orange orange-format">
+
+                <div class="social-btn-block">
+                    <button aria-selected="true" class="ff-sans-cond text-white bg-dark social-btn bold"><i class="fa-brands fa-apple"></i>   IOS Download</button>
+                    <p class="text-white">IOS download button default</p>
+                </div>
+
+                <div class="social-btn-block">
+                    <button aria-selected="false" class="ff-sans-cond text-dark bg-white social-btn bold"><i class="fa-brands fa-android"></i>   Android Download</button>
+                    <p class="text-white">Android download button default</p>
+                </div>
+                
+                <div class="social-btn-block">
+                    <button aria-selected="true" class="ff-sans-cond text-white bg-blue social-btn bold"><i class="fa-brands fa-apple"></i>   IOS Download</button>
+                    <p class="text-white">IOS download button hover</p>
+                </div>
+                              
+                <div class="social-btn-block">
+                    <button aria-selected="false" class="ff-sans-cond text-black bg-orange-light social-btn bold"><i class="fa-brands fa-android"></i>   Android Download</button>
+                    <p class="text-white">Android download button hover</p>
+                </div>
+
+            </div>
+            
+        </section>
+        
+        
+    </div>
+    
+    
+</body>
+</html>
