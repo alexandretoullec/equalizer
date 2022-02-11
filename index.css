@@ -14,7 +14,7 @@
     
     /* font-sizes */
     --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-    --fs-800: 3.5rem;
+    --fs-800: 3rem;
     --fs-700: 1.5rem;
     --fs-600: 1rem;
     --fs-500: 1rem;
@@ -353,22 +353,22 @@ select {
     background-image: url(./starter-code/assets/bg-pattern-1.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 20rem;
-    height: 25rem;
-    top: -2rem;
-    right: -3rem;
+    width: 25rem;
+    height: 30rem;
+    top: -1rem;
+    right: 0;
     /* margin: -2rem -6rem; */
 }
 
 .text-block{
     
     margin: 5rem 5rem 5rem 0;
-    width: 45rem;
+    width: 60rem;
 }
 
 .text-block h1{
     margin-bottom: 3rem;
-    font-size: 4rem;
+    
 }
 
 /* main landing page  */
@@ -377,9 +377,10 @@ select {
     display: flex;
     /* position: relative; */
     margin: 10rem 0 15rem 0;
-    height: 30rem;
+    height: 35rem;
     background-color: hsl( var(--clr-dark) );
     border-radius: 15px;
+    
 }
 
 .pres-block-back{
@@ -388,9 +389,9 @@ select {
     background-size: contain;
     background-repeat: no-repeat;
     width: 25rem;
-    height: 25rem;
+    height: 28rem;
     /* background-position: center; */
-    left: 35rem;
+    left: 40rem;
 }
 
 .pres-block-phone{
@@ -400,16 +401,18 @@ select {
     background-repeat: no-repeat;
     left: 7rem;
     top:-10rem;
-    
-    width: 25rem;
+    height: 40rem;
+    width: 30rem;
     position: relative;
     
 }
 
 .pres-block-pricing{
     position: absolute;
-    right: 20rem;
-    top: 45rem;
+    right: 27rem;
+    top: 60rem;
+    width: 22rem;
+    height: 35rem;
 }
 
 /* footer */
@@ -437,7 +440,7 @@ footer{
 /* Compontents         */
 /* ------------------- */
 
-@media (max-width:800px) {
+@media (max-width:900px) {
 
 
     body{
@@ -448,6 +451,7 @@ footer{
     .pattern1{
     width: 15rem;
     right: -3rem;
+    
     }
 
     .text-block{
@@ -457,15 +461,15 @@ footer{
     .pres-block-back{
         
         width: 25rem;
-        height: 25rem;
+        height: 20rem;
         /* background-position: center; */
-        left: 20rem;
+        left: 25rem;
     }
 
     .pres-block-pricing{
         position: absolute;
         right: 8rem;
-        top: 50rem;
+        top: 75rem;
     }
 
     footer{
@@ -507,15 +511,15 @@ footer{
 
         .text-block{
             margin: 2rem;
-            width: 17rem;
+            width: 20rem;
         }
 
         .text-block h1{
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
 
         .pres-block{
-           width: 24.5rem;
+           width: 30.5rem;
             margin: 10rem 0 20rem 0;
            
         }
@@ -529,20 +533,25 @@ footer{
         }
     
         .pres-block-phone{
-            left: 5rem;
+            left: 6rem;
         }
 
         .pres-block-pricing{
-            top:60rem;
+            top:70rem;
             left: -0.5rem;
-            width: 26rem;
-            height: 25rem;
+            width: 32rem;
+            height: 27rem;
             align-items: center;
             justify-items: center;
         }
 
+        .social-btn{
+            width: 25rem;
+            height: 3.5rem;
+        }
+
         footer{
-            margin: 2rem;
+            margin: 4rem;
             grid-template-columns: 1fr;
     
         }
