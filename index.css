@@ -390,7 +390,7 @@ select {
     width: 25rem;
     height: 25rem;
     /* background-position: center; */
-    left: 40rem;
+    left: 35rem;
 }
 
 .pres-block-phone{
@@ -408,7 +408,7 @@ select {
 
 .pres-block-pricing{
     position: absolute;
-    right: 23rem;
+    right: 20rem;
     top: 45rem;
 }
 
@@ -492,10 +492,14 @@ footer{
 
 @media (max-width:600px) {
 
-    /* body{
-        margin: 0;
-        padding: 0;
-    } */
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .equa{
+            margin: 0 2rem;
+        }
 
         .pattern1{
         display: none;
@@ -511,25 +515,53 @@ footer{
         }
 
         .pres-block{
-            
-            margin: 0;
-            width: 100%;
-            
-            
-            
-            
+           width: 24.5rem;
+            margin: 10rem 0 20rem 0;
+           
         }
 
         .pres-block-back{
             background: none;
-            width: 15rem;
+            width: 5rem;
             height: 25rem;
             /* background-position: center; */
-            left: -5rem;
+            
         }
     
-        
+        .pres-block-phone{
+            left: 5rem;
+        }
 
+        .pres-block-pricing{
+            top:60rem;
+            left: -0.5rem;
+            width: 26rem;
+            height: 25rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        footer{
+            margin: 2rem;
+            grid-template-columns: 1fr;
+    
+        }
+
+        .grid-h1{
+            grid-row: 1
+            
+        }
+    
+        .grid-p{
+            grid-row: 2
+           
+        }
+    
+        .social-logo{
+            grid-row: 3
+            
+           
+        }
 }
 
 
